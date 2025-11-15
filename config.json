@@ -17,7 +17,7 @@
 	"api":"https://noobs-api.rf.gd/dipto",
 	"adminOnly": {
 		"enable": false,
-		"ignoreCommand": [61572240295227]
+		"ignoreCommand": [61575161136678]
 	},
 	"adminBot": [    
 	"61575161136678",
@@ -25,7 +25,7 @@
   ],
 	"whiteListMode": {
 		"enable": false,
-		"whiteListIds": [61572240295227],
+		"whiteListIds": [61575161136678],
 		"notes": "if you enable this feature, only the ids in the whiteListIds list can use the bot"
 	},
 	"whiteListModeThread": {
