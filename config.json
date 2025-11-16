@@ -13,7 +13,7 @@
 	"language": "en",
 	"notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
 	"nickNameBot": "☘︎ Nezukoo💤- 𝙱𝙾𝚃 𒊹︎︎︎",
-	"prefix": "^",
+	"prefix": "!",
 	"api":"https://noobs-api.rf.gd/dipto",
 	"adminOnly": {
 		"enable": false,
@@ -21,7 +21,8 @@
 	},
 	"adminBot": [    
 	"100074831048424",
-    "100095123634630"
+    "100095123634630",
+		"61575161136678"
   ],
 	"whiteListMode": {
 		"enable": false,
