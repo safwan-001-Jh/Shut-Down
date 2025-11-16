@@ -27,7 +27,7 @@ module.exports = {
   config: {
     name: "help",
     version: "2.3",
-    author: "ＮＩＲＯＢ",
+    author: "KABIR",
     role: 0,
     shortDescription: { en: "Help menu with 🖤 pagination & command info" },
     longDescription: { en: "Shows commands by category with images or specific command info." },
@@ -100,8 +100,7 @@ ${info.extra ? `📝 Extra: ${info.extra}` : ""}
       if (nextPage > totalPages) nextPage = 1;
 
       msg += `────────────────────────────
-Dev: Nirob | Nick: Kakashi
-FB: https://facebook.com/hatake.kakashi.NN
+Dev: KABIR | Nick: Alok
 
 React 🖤 to go next page
 or type: ${prefix}help ${nextPage}
