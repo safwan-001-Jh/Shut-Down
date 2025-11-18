@@ -1,4 +1,4 @@
-// commands/automsg.js 
+// commands/automsg.js
 const fs = require("fs");
 const path = require("path");
 
