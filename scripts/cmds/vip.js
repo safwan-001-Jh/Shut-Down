@@ -3,9 +3,8 @@ const path = require("path");
 
 const VIP_FILE = path.join(__dirname, "vip.json");
 
-// Owner Facebook UID
-const OWNER_UID = "61575161136678",
-  "100074831048424";
+// Owner Facebook UIDs - ***FIXED: Defined as an Array***
+const OWNER_UIDS = ["61575161136678", "100074831048424"];
 
 module.exports = {
   config: {
@@ -25,6 +24,9 @@ module.exports = {
   onStart: async function ({ message, event, usersData, args }) {
     const { senderID, mentions, messageReply } = event;
 
+    // Check if the senderID is one of the bot owners - ***NEW LOGIC***
+    const isOwner = OWNER_UIDS.includes(senderID);
+
     let vipDB = [];
     if (fs.existsSync(VIP_FILE)) {
       try {
@@ -38,7 +40,7 @@ module.exports = {
     const cmd = args[0]?.toLowerCase();
 
     if (cmd === "add") {
-      if (senderID !== OWNER_UID) {
+      if (!isOwner) { // ***UPDATED CHECK***
         return message.reply("❌ | Ei command er control Owner er kache !! Tui ekhono VIP list e nai, !vip try kor ! 💡");
       }
       const day = parseInt(args[args.length - 1]);
@@ -60,7 +62,7 @@ module.exports = {
       fs.writeFileSync(VIP_FILE, JSON.stringify(vipDB, null, 2));
     }
     else if (cmd === "remove") {
-      if (senderID !== OWNER_UID) return message.reply("❌ | You don't have permission to use this command.\nOnly the Bot Owner can use this.");
+      if (!isOwner) return message.reply("❌ | You don't have permission to use this command.\nOnly the Bot Owner can use this."); // ***UPDATED CHECK***
       let uids = [];
       if (Object.keys(mentions).length > 0) uids = Object.keys(mentions);
       else if (messageReply) uids = [messageReply.senderID];
