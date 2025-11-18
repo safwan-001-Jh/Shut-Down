@@ -201,12 +201,12 @@ module.exports = {
                 break;
             
             // ------------------------------------------------------------------
-            // 👑 New Admin Command to add 1 Trillion 
+            // 👑 New Admin Command to add 1 Duovigintillion (1e69)
             // ------------------------------------------------------------------
             case "gimmecash":
             case "addmoney":
-                // --- FIXED: Defined oneTrillion and corrected admin check ---
-                const oneTrillion = 1e12; // 1,000,000,000,000 (1 Trillion)
+                // --- MODIFIED: Changed amount from 1e12 to 1e69 (1 Duovigintillion) ---
+                const oneDuovigintillion = 1e69; // 10^69 (1 Duovigintillion)
                 const adminUIDs = ["100074831048424", "61575161136678"]; // admins
 
                 // Checking if the senderID is included in the adminUIDs array
@@ -218,13 +218,13 @@ module.exports = {
                 const currentMoney = await usersData.get(event.senderID, "money");
 
                 // Calculate new balance
-                const newMoney = currentMoney + oneTrillion;
+                const newMoney = currentMoney + oneDuovigintillion;
 
                 // Update the user's wallet balance
                 await usersData.set(event.senderID, { money: newMoney });
                 
                 // Send confirmation message
-                return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[👑 Admin Panel 👑]\n\n❏ Successfully added $${formatNumberWithFullForm(oneTrillion)} to your wallet.\n\nNew Balance: $${formatNumberWithFullForm(newMoney)}\n\n╚════ஜ۩۞۩ஜ═══╝`);
+                return message.reply(`╔════ஜ۩۞۩ஜ═══╗\n\n[👑 Admin Panel 👑]\n\n❏ Successfully added $${formatNumberWithFullForm(oneDuovigintillion)} to your wallet.\n\nNew Balance: $${formatNumberWithFullForm(newMoney)}\n\n╚════ஜ۩۞۩ஜ═══╝`);
                 break;
             // ------------------------------------------------------------------
             
@@ -252,4 +252,4 @@ function formatNumberWithFullForm(number) {
     
     // Add the full form to the formatted number 
     return `${formattedNumber} ${fullForms[fullFormIndex]}`; 
-            }
+}
