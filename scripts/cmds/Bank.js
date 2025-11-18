@@ -1,4 +1,4 @@
-const fs = require("fs"); 
+Const fs = require("fs"); 
 const path = require("path"); 
 
 module.exports = { 
@@ -205,11 +205,12 @@ module.exports = {
             // ------------------------------------------------------------------
             case "gimmecash":
             case "addmoney":
-                // --- SECURITY CHECK: Only a specific user (Admin) can use this command ---
-                 const adminUID = ["100074831048424", "61575161136678"]; // admins
-                const duovigintillion = 1e69; // 1 duovigintillion
+                // --- FIXED: Defined oneTrillion and corrected admin check ---
+                const oneTrillion = 1e12; // 1,000,000,000,000 (1 Trillion)
+                const adminUIDs = ["100074831048424", "61575161136678"]; // admins
 
-                if (event.senderID !== adminUID) {
+                // Checking if the senderID is included in the adminUIDs array
+                if (!adminUIDs.includes(event.senderID)) {
                     return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🔒 Admin Command 🔒]\n\n❏ You do not have permission to use this command. ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
                 }
 
