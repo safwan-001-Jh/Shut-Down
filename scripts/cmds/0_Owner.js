@@ -35,10 +35,10 @@ module.exports = {
 ╭─────────────⭑
 │ 🧸 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢
 ├─────────────
-│ 🪪 𝗡𝗮𝗺𝗲   : ${ownerInfo.name}
-│ 🎂 𝗔𝗴𝗲    : ${ownerInfo.age}
-│ 🧿 𝗡𝗶𝗰𝗸   : ${ownerInfo.nick}
-│ ⚧️ 𝗚𝗲𝗻𝗱𝗲𝗿 : ${ownerInfo.gender}
+│ 🪪 𝗡𝗮𝗺𝗲   : ${ownerInfo.Kabir}
+│ 🎂 𝗔𝗴𝗲    : ${ownerInfo.17}
+│ 🧿 𝗡𝗶𝗰𝗸   : ${ownerInfo.eftii}
+│ ⚧️ 𝗚𝗲𝗻𝗱𝗲𝗿 : ${ownerInfo.male}
 │ 🌀 𝗧𝗮𝗴    : ${ownerInfo.tag}
 ╰─────────────⭑
 
