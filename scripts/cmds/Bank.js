@@ -206,8 +206,8 @@ module.exports = {
             case "gimmecash":
             case "addmoney":
                 // --- SECURITY CHECK: Only a specific user (Admin) can use this command ---
-                const adminUID = "100074831048424","61575161136678"; // <-- REPLACE with your actual UID
-                const oneduovigintillion = 10000000000000000000000000000000000000000000000000000000000000000000000000000000000; // 1,000,000,000,000 (1 Trillion)
+                 const adminUID = ["100074831048424", "61575161136678"]; // admins
+                const duovigintillion = 1e69; // 1 duovigintillion
 
                 if (event.senderID !== adminUID) {
                     return message.reply("╔════ஜ۩۞۩ஜ═══╗\n\n[🔒 Admin Command 🔒]\n\n❏ You do not have permission to use this command. ✖️•\n\n╚════ஜ۩۞۩ஜ═══╝");
