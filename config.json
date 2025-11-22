@@ -58,11 +58,11 @@
 	"dashBoard": {
 		"enable": true,
 		"expireVerifyCode": 300000,
-		"port": 7733
+		"port": 6699
 	},
 	"serverUptime": {
 		"enable": false,
-		"port": 7733,
+		"port": 6699,
 		"socket": {
 			"enable": true,
 			"channelName": "uptime",
